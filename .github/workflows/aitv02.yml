@@ -3,17 +3,18 @@ name: Segundo Workflow
 on:
   push:
 
+env:
+    CURSO: "Integração contínua"
+
 jobs:
   primeiro-job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Primeiro passo"
+      - run: echo "Ativ02"
       - name: Checkout
         uses: actions/checkout@v5
-      - name: variavel
-        run: CURSO = "Integração contínua"
       - name: Exibir curso
-        run: echo $curso
+        run: echo "${{env.CURSO}}
       - name: Usuario
         run: whoami
       
