@@ -1,0 +1,19 @@
+name: Segundo Workflow
+
+on:
+  push:
+
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Primeiro passo"
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: variavel
+        run: CURSO = "Integração contínua"
+      - name: Exibir curso
+        run: echo $curso
+      - name: Usuario
+        run: whoami
+      
