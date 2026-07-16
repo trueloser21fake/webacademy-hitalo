@@ -2,6 +2,7 @@ name: Primeiro Workflow
 
 on:
   push:
+
 jobs:
   primeiro-job:
     runs-on: ubuntu-latest
@@ -13,4 +14,3 @@ jobs:
         run: ls ${{ github.workspace }}
       - name: Status
         run: echo "Status ${{ job.status }}."
-      
