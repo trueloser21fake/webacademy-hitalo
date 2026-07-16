@@ -17,4 +17,9 @@ jobs:
         run: echo "${{env.CURSO}}"
       - name: Usuario
         run: whoami
+      - name: Repositorio
+        run: pwd
+      - name: Exibir Branch Atual
+        run: echo "A branch atual é ${{ github.ref_name }}"
+
       
