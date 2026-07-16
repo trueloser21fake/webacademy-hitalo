@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
       - name: Exibir curso
-        run: echo "${{env.CURSO}}
+        run: echo "${{env.CURSO}}"
       - name: Usuario
         run: whoami
       
