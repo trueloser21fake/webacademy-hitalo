@@ -1,0 +1,21 @@
+name: Segundo Workflow
+
+on:
+  push:
+
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Data
+        run: date
+      - name: Sistema Operacional
+        run: uname -a
+      - name: Vesao do Git
+        run: git --version
+      - name: Leia o Read
+        run: cat README.md
+      - name: Arquivos
+        run: ls -al
+      
+
