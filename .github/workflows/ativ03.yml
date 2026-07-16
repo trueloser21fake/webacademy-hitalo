@@ -1,0 +1,20 @@
+name: Segundo Workflow
+
+on:
+  push:
+
+jobs:
+  primeiro-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Ativ03"
+      
+      - name: Checkout
+        uses: actions/checkout@v5
+        
+      - name: Validar organização mínima
+        run: |
+          if [ ! -f "README.md" ]; then echo "Erro: README.md ausente"; exit 1; fi
+          if [ ! -f "LICENSE" ]; then echo "Erro: LICENSE ausente"; exit 1; fi
+          if [ ! -f ".gitignore" ]; then echo "Erro: .gitignore ausente"; exit 1; fi
+          echo "Todos os arquivos obrigatórios estão presentes no repositório!"
