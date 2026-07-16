@@ -16,6 +16,6 @@ jobs:
       - name: Leia o Read
         run: cat README.md
       - name: Arquivos
-        run: ls 
+        run: ls -la
       
 
