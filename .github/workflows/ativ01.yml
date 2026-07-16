@@ -7,6 +7,9 @@ jobs:
   primeiro-job:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "Primeiro passo"
+      - name: Checkout
+        uses: actions/checkout@v5
       - name: Data
         run: date
       - name: Sistema Operacional
